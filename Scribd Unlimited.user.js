@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Scribd Unlimited
-// @namespace    https://tampermonkey.net/
-// @version      1.0.0
+// @namespace    https://github.com/mdawsondev/scribd-unlimited
+// @version      1.0.1
 // @description  Removes advertisements and unblurs pages.
 // @author       Matt Dawson | https://mdawsondev.com
 // @icon         https://pbs.twimg.com/profile_images/864156483881123840/wFgIx3RN_400x400.jpg
@@ -21,10 +21,10 @@ var inline_src = (<><![CDATA[
         const adEles   = document.querySelectorAll('.page_missing_explanation'),
               blurEles = document.querySelectorAll('.blurred_page');
 
-        //blurEles.forEach(node => node.classList.remove('blurred_page'));
+        blurEles.forEach(node => node.classList.remove('blurred_page'));
         adEles.forEach(e => e.parentNode.removeChild(e));
 
-        console.log("Scribd Full Access: Scribed has been cleaned.");
+        console.log("Scribd Unlimited: Scribed has been cleaned.");
 
     })();
 
