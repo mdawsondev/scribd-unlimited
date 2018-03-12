@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Scribd Unlimited
 // @namespace    https://github.com/mdawsondev/scribd-unlimited
-// @version      1.0.2
+// @version      1.0.3
 // @description  Removes advertisements and unblurs pages.
 // @author       Matt Dawson | https://mdawsondev.com
 // @icon         https://pbs.twimg.com/profile_images/864156483881123840/wFgIx3RN_400x400.jpg
@@ -13,7 +13,7 @@
 
 /* jshint ignore:start */
 var inline_src = (<><![CDATA[
-    /* jshint ignore:end */
+/* jshint ignore:end */
     /* jshint esnext: false */
     /* jshint esversion: 6 */
 
@@ -24,12 +24,12 @@ var inline_src = (<><![CDATA[
         blurEles.forEach(node => node.classList.remove('blurred_page'));
         adEles.forEach(e => e.parentNode.removeChild(e));
 
-        console.log("Scribd Unlimited: Scribd has been cleaned.");
+        console.log('Scribd Unlimited: Scribd has been cleaned.');
 
     })();
 
-    /* jshint ignore:start */
+/* jshint ignore:start */
 ]]></>).toString();
-                  var c = Babel.transform(inline_src, { presets: [ "es2015", "es2016" ] });
+                  var c = Babel.transform(inline_src, { presets: [ 'es2015', 'es2016' ] });
 eval(c.code);
 /* jshint ignore:end */
