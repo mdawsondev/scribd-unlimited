@@ -13,23 +13,23 @@
 
 /* jshint ignore:start */
 var inline_src = (<><![CDATA[
-  /* jshint ignore:end */
-  /* jshint esnext: false */
-  /* jshint esversion: 6 */
+    /* jshint ignore:end */
+    /* jshint esnext: false */
+    /* jshint esversion: 6 */
 
-  (function unblurDoc() {
-      const adEles   = document.querySelectorAll('.page_missing_explanation'),
-            blurEles = document.querySelectorAll('.blurred_page');
+    (function unblurDoc() {
+        const adEles   = document.querySelectorAll('.page_missing_explanation'),
+              blurEles = document.querySelectorAll('.blurred_page');
 
-      //blurEles.forEach(node => node.classList.remove('blurred_page'));
-      adEles.forEach(e => e.parentNode.removeChild(e));
+        //blurEles.forEach(node => node.classList.remove('blurred_page'));
+        adEles.forEach(e => e.parentNode.removeChild(e));
 
-      console.log("Scribd Full Access: Scribed has been cleaned.");
+        console.log("Scribd Full Access: Scribed has been cleaned.");
 
-  })();
+    })();
 
-  /* jshint ignore:start */
+    /* jshint ignore:start */
 ]]></>).toString();
-                var c = Babel.transform(inline_src, { presets: [ "es2015", "es2016" ] });
+                  var c = Babel.transform(inline_src, { presets: [ "es2015", "es2016" ] });
 eval(c.code);
 /* jshint ignore:end */
