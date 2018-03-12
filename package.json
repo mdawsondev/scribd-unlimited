@@ -1,0 +1,9 @@
+{
+  "name": "scribd-unlimited",
+  "version": "1.0.0",
+  "description": "Removes advertisements and unblurs pages.",
+  "main": "script.js",
+  "repository": "https://github.com/mdawsondev/scribd-unlimited",
+  "author": "Matt Dawson <mdawsondev@gmail.com>",
+  "license": "MIT"
+}
